@@ -7,9 +7,7 @@ const App = () => {
 
   useEffect(()=>{
     axios.get('http://apl.celtis.net/test.php?i').then(res=>{
-      alert(res)
-    }).then (response => {
-      if (response.status === 200) {
+      if (res.status === 200) {
         Linking.openURL('http://apl.celtis.net/test.php')
       }
     })
@@ -19,6 +17,7 @@ const App = () => {
       // Linking.openURL('file:///android_asset/HTML5/index.html')
       }
     })
+
   },[])
 
 
